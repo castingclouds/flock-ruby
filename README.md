@@ -14,15 +14,19 @@ Here are the steps:
 ### Useful command:
 
 Run the compass by doing 
+
     compass watch
     
 <a href="http://daigo.org/2013/11/installing-npm-on-mavericks-macbook-pro/">This blog post</a> may be useful if you are like me and running Mac OS X.
 
 If you want to make sure foundation is up to date, try 
+
     foundation update
     
 (requires bower)
 
 To run jekyll locally, run 
+
     bundle exec jekyll serve --watch
+
 <a href="https://help.github.com/articles/using-jekyll-with-pages">See this</a>. Run '''bundle update''' to 
