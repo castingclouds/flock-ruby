@@ -1,5 +1,468 @@
 @charset "UTF-8";
+@import url("http://fonts.googleapis.com/css?family=Lora:400,700,400italic|Stint+Ultra+Expanded");
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+/* 
+	style.css 
+	Written by Daigo Fujiwara (@DaigoFuji)
+	Date: PUBLISHEDDATE
+	use this: http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml#CSS_Style_Rules
+	also: http://csslint.net/ (Will hurt your feelings)
+*/
+/* Get Google font http://www.google.com/fonts
+*/
+/* I will be using those fonts.
+headlines: Stint Ultra Expanded 
+body: Lora, 18px over 28px 
+*/
+/* get css3 mixins http://compass-style.org/reference/compass/css3/ */
+/* normalize it */
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 22, ../bower_components/foundation/scss/normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 32, ../bower_components/foundation/scss/normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, ../bower_components/foundation/scss/normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+/* line 52, ../bower_components/foundation/scss/normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* line 56, ../bower_components/foundation/scss/normalize.scss */
+script {
+  display: none !important;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 70, ../bower_components/foundation/scss/normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 80, ../bower_components/foundation/scss/normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 92, ../bower_components/foundation/scss/normalize.scss */
+a {
+  background: transparent;
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 100, ../bower_components/foundation/scss/normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 109, ../bower_components/foundation/scss/normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 122, ../bower_components/foundation/scss/normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 131, ../bower_components/foundation/scss/normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 140, ../bower_components/foundation/scss/normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 148, ../bower_components/foundation/scss/normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 156, ../bower_components/foundation/scss/normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 166, ../bower_components/foundation/scss/normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 178, ../bower_components/foundation/scss/normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 187, ../bower_components/foundation/scss/normalize.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+/* line 195, ../bower_components/foundation/scss/normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 203, ../bower_components/foundation/scss/normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 212, ../bower_components/foundation/scss/normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 219, ../bower_components/foundation/scss/normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 223, ../bower_components/foundation/scss/normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 235, ../bower_components/foundation/scss/normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 243, ../bower_components/foundation/scss/normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 255, ../bower_components/foundation/scss/normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 267, ../bower_components/foundation/scss/normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 278, ../bower_components/foundation/scss/normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 292, ../bower_components/foundation/scss/normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 304, ../bower_components/foundation/scss/normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 316, ../bower_components/foundation/scss/normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 331, ../bower_components/foundation/scss/normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 341, ../bower_components/foundation/scss/normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+/* line 351, ../bower_components/foundation/scss/normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 362, ../bower_components/foundation/scss/normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 375, ../bower_components/foundation/scss/normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 384, ../bower_components/foundation/scss/normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 394, ../bower_components/foundation/scss/normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 407, ../bower_components/foundation/scss/normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* foundation */
+/* ===== Custom Font Stacks
+*/
+/* I will be using those fonts. 
+http://www.google.com/fonts
+headlines: Stint Ultra Expanded 
+body: Lora, 18px over 28px 
+
+@import url("http://fonts.googleapis.com/css?family=Lora:400,700,400italic|Stint+Ultra+Expanded");
+*/
+/*
+	Foundation original in pixel
+	$small-range: (0em, 40em);  0 ~ 640 
+	$medium-range: (40.063em, 64em);   ~ 1024
+	$large-range: (64.063em, 90em); ~ 1440
+	$xlarge-range: (90.063em, 120em); ~ 1920
+	$xxlarge-range: (120.063em);	~ > 1920 SHould be 1170 
+
+	NEW!
+	$small-range: (0em, 30em);  0 ~ 480 
+	$medium-range: (30.063em, 48.75em);   ~ 780
+	$large-range: (48.813em, 64em); ~ 1024
+	$xlarge-range: (64.063em, 75em); ~ 1170
+	$xxlarge-range: (75.063em);	> 1170 
+
+*/
 /* line 287, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-mq-small {
   font-family: "/only screen and (max-width: 40em)/";
@@ -14,19 +477,19 @@ meta.foundation-mq-medium {
 
 /* line 297, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-mq-large {
-  font-family: "/only screen and (min-width:64.063em)/";
+  font-family: "/only screen and (min-width:48.813em)/";
   width: 64.063em;
 }
 
 /* line 302, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-mq-xlarge {
-  font-family: "/only screen and (min-width:90.063em)/";
+  font-family: "/only screen and (min-width:64.063em)/";
   width: 90.063em;
 }
 
 /* line 307, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-mq-xxlarge {
-  font-family: "/only screen and (min-width:120.063em)/";
+  font-family: "/only screen and (min-width:75.063em)/";
   width: 120.063em;
 }
 
@@ -51,10 +514,10 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Georgia, serif;
   font-weight: normal;
   font-style: normal;
-  line-height: 1;
+  line-height: 1.7;
   position: relative;
   cursor: default;
 }
@@ -171,7 +634,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5rem;
+  max-width: 75rem;
   *zoom: 1;
 }
 /* line 165, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -199,8 +662,8 @@ select {
 /* line 200, ../bower_components/foundation/scss/foundation/components/_grid.scss */
 .row .row {
   width: auto;
-  margin-left: -0.9375rem;
-  margin-right: -0.9375rem;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
   margin-top: 0;
   margin-bottom: 0;
   max-width: none;
@@ -236,8 +699,8 @@ select {
 .column,
 .columns {
   position: relative;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   width: 100%;
   float: left;
 }
@@ -401,8 +864,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     float: left;
   }
 
@@ -577,7 +1040,7 @@ select {
     float: right !important;
   }
 }
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 30.063em) {
   /* line 148, ../bower_components/foundation/scss/foundation/components/_grid.scss */
   .medium-push-1 {
     position: relative;
@@ -736,8 +1199,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     float: left;
   }
 
@@ -1066,7 +1529,7 @@ select {
     left: auto;
   }
 }
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 48.813em) {
   /* line 148, ../bower_components/foundation/scss/foundation/components/_grid.scss */
   .large-push-1 {
     position: relative;
@@ -1225,8 +1688,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     float: left;
   }
 
@@ -1401,7 +1864,7 @@ select {
     float: right !important;
   }
 }
-@media only screen and (min-width: 90.063em) {
+@media only screen and (min-width: 64.063em) {
   /* line 148, ../bower_components/foundation/scss/foundation/components/_grid.scss */
   .xlarge-push-1 {
     position: relative;
@@ -1560,8 +2023,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     float: left;
   }
 
@@ -1736,7 +2199,7 @@ select {
     float: right !important;
   }
 }
-@media only screen and (min-width: 120.063em) {
+@media only screen and (min-width: 75.063em) {
   /* line 148, ../bower_components/foundation/scss/foundation/components/_grid.scss */
   .xxlarge-push-1 {
     position: relative;
@@ -1895,8 +2358,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     float: left;
   }
 
@@ -2100,7 +2563,7 @@ select {
   color: #222222;
   padding: 1rem;
   display: block;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Georgia, serif;
   font-size: 1rem;
 }
 /* line 36, ../bower_components/foundation/scss/foundation/components/_accordion.scss */
@@ -2110,7 +2573,7 @@ select {
 /* line 39, ../bower_components/foundation/scss/foundation/components/_accordion.scss */
 .accordion .content {
   display: none;
-  padding: 0.9375rem;
+  padding: 0.75rem;
 }
 /* line 42, ../bower_components/foundation/scss/foundation/components/_accordion.scss */
 .accordion .content.active {
@@ -2128,8 +2591,8 @@ select {
   position: relative;
   padding: 0.875rem 1.5rem 0.875rem 0.875rem;
   font-size: 0.8125rem;
-  background-color: #008cba;
-  border-color: #0079a1;
+  background-color: #6d9877;
+  border-color: #618a6b;
   color: white;
 }
 /* line 105, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
@@ -2382,7 +2845,7 @@ select {
     clear: both;
   }
 }
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 30.063em) {
   /* line 44, ../bower_components/foundation/scss/foundation/components/_block-grid.scss */
   .medium-block-grid-1 > li {
     width: 100%;
@@ -2551,7 +3014,7 @@ select {
     clear: both;
   }
 }
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 48.813em) {
   /* line 44, ../bower_components/foundation/scss/foundation/components/_block-grid.scss */
   .large-block-grid-1 > li {
     width: 100%;
@@ -2749,7 +3212,7 @@ select {
 .breadcrumbs > * a,
 .breadcrumbs > * span {
   text-transform: uppercase;
-  color: #008cba;
+  color: #6d9877;
 }
 /* line 71, ../bower_components/foundation/scss/foundation/components/_breadcrumbs.scss */
 .breadcrumbs > *.current {
@@ -2797,7 +3260,7 @@ select {
 /* line 197, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button, .button {
   cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Georgia, serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -2811,8 +3274,8 @@ button, .button {
   padding-left: 2rem;
   font-size: 1rem;
   /*     @else                            { font-size: $padding - rem-calc(2); } */
-  background-color: #008cba;
-  border-color: #0079a1;
+  background-color: #6d9877;
+  border-color: #618a6b;
   color: white;
   -webkit-transition: background-color 300ms ease-out;
   -moz-transition: background-color 300ms ease-out;
@@ -2825,7 +3288,7 @@ button, .button {
 }
 /* line 142, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #0079a1;
+  background-color: #618a6b;
 }
 /* line 153, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
@@ -2928,8 +3391,8 @@ button.round, .button.round {
 }
 /* line 220, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled, button[disabled], .button.disabled, .button[disabled] {
-  background-color: #008cba;
-  border-color: #0079a1;
+  background-color: #6d9877;
+  border-color: #618a6b;
   color: white;
   cursor: default;
   opacity: 0.7;
@@ -2938,7 +3401,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled] {
 }
 /* line 142, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #0079a1;
+  background-color: #618a6b;
 }
 /* line 153, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
@@ -2946,7 +3409,7 @@ button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[dis
 }
 /* line 166, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #008cba;
+  background-color: #6d9877;
 }
 /* line 221, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
@@ -3015,7 +3478,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   background-color: #f04124;
 }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 30.063em) {
   /* line 228, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
   button, .button {
     display: inline-block;
@@ -3321,7 +3784,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   display: block;
 }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 30.063em) {
   /* line 128, ../bower_components/foundation/scss/foundation/components/_clearing.scss */
   .clearing-main-prev,
   .clearing-main-next {
@@ -4337,7 +4800,7 @@ label.error {
 }
 
 /* Styles for screens that are atleast 768px; */
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 30.063em) {
   /* line 190, ../bower_components/foundation/scss/foundation/components/_joyride.scss */
   .joyride-tip-guide {
     width: 300px;
@@ -4391,7 +4854,7 @@ kbd {
 /* line 87, ../bower_components/foundation/scss/foundation/components/_labels.scss */
 .label {
   font-weight: normal;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Georgia, serif;
   text-align: center;
   text-decoration: none;
   line-height: 1;
@@ -4401,7 +4864,7 @@ kbd {
   margin-bottom: inherit;
   padding: 0.25rem 0.5rem 0.375rem;
   font-size: 0.6875rem;
-  background-color: #008cba;
+  background-color: #6d9877;
   color: white;
 }
 /* line 92, ../bower_components/foundation/scss/foundation/components/_labels.scss */
@@ -4771,7 +5234,7 @@ kbd {
   display: none;
 }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 30.063em) {
   /* line 330, ../bower_components/foundation/scss/foundation/components/_orbit.scss */
   .touch .orbit-container .orbit-prev,
   .touch .orbit-container .orbit-next {
@@ -4837,14 +5300,14 @@ ul.pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus {
 }
 /* line 60, ../bower_components/foundation/scss/foundation/components/_pagination.scss */
 ul.pagination li.current a {
-  background: #008cba;
+  background: #6d9877;
   color: white;
   font-weight: bold;
   cursor: default;
 }
 /* line 67, ../bower_components/foundation/scss/foundation/components/_pagination.scss */
 ul.pagination li.current a:hover, ul.pagination li.current a:focus {
-  background: #008cba;
+  background: #6d9877;
 }
 /* line 119, ../bower_components/foundation/scss/foundation/components/_pagination.scss */
 ul.pagination li {
@@ -4898,10 +5361,10 @@ ul.pagination li {
 .panel.callout {
   border-style: solid;
   border-width: 1px;
-  border-color: #baeeff;
+  border-color: #e1eae3;
   margin-bottom: 1.25rem;
   padding: 1.25rem;
-  background: #edfbff;
+  background: white;
 }
 /* line 48, ../bower_components/foundation/scss/foundation/components/_panels.scss */
 .panel.callout > :first-child {
@@ -4926,7 +5389,7 @@ ul.pagination li {
 }
 /* line 74, ../bower_components/foundation/scss/foundation/components/_panels.scss */
 .panel.callout a {
-  color: #008cba;
+  color: #6d9877;
 }
 /* line 79, ../bower_components/foundation/scss/foundation/components/_panels.scss */
 .panel.radius {
@@ -4954,7 +5417,7 @@ ul.pagination li {
   color: #eeeeee;
   font-weight: normal;
   font-size: 1rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Georgia, serif;
 }
 /* line 139, ../bower_components/foundation/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .price {
@@ -4964,7 +5427,7 @@ ul.pagination li {
   color: #333333;
   font-weight: normal;
   font-size: 2rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Georgia, serif;
 }
 /* line 140, ../bower_components/foundation/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .description {
@@ -5005,7 +5468,7 @@ ul.pagination li {
 }
 /* line 57, ../bower_components/foundation/scss/foundation/components/_progress-bars.scss */
 .progress .meter {
-  background: #008cba;
+  background: #6d9877;
   height: 100%;
   display: block;
 }
@@ -5103,7 +5566,7 @@ ul.pagination li {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 30.063em) {
   /* line 149, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal {
     padding: 1.875rem;
@@ -5148,7 +5611,7 @@ ul.pagination li {
   padding: 0.875rem 0;
   list-style-type: none;
   list-style-position: inside;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Georgia, serif;
 }
 /* line 54, ../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li {
@@ -5158,13 +5621,13 @@ ul.pagination li {
 /* line 58, ../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li a {
   display: block;
-  color: #008cba;
+  color: #6d9877;
 }
 /* line 63, ../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li.active > a:first-child {
   color: #4d4d4d;
   font-weight: normal;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Georgia, serif;
 }
 /* line 69, ../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li.divider {
@@ -5333,7 +5796,7 @@ ul.pagination li {
   display: inline;
   margin-left: 1rem;
   margin-bottom: 0.625rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Georgia, serif;
   font-weight: normal;
   font-size: 0.875rem;
   color: #999999;
@@ -5349,7 +5812,7 @@ ul.pagination li {
 .sub-nav dt a:hover,
 .sub-nav dd a:hover,
 .sub-nav li a:hover {
-  color: #0079a1;
+  color: #618a6b;
 }
 /* line 87, ../bower_components/foundation/scss/foundation/components/_sub-nav.scss */
 .sub-nav dt.active a,
@@ -5358,7 +5821,7 @@ ul.pagination li {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   font-weight: normal;
-  background: #008cba;
+  background: #6d9877;
   padding: 0.1875rem 1rem;
   cursor: default;
   color: white;
@@ -5367,7 +5830,7 @@ ul.pagination li {
 .sub-nav dt.active a:hover,
 .sub-nav dd.active a:hover,
 .sub-nav li.active a:hover {
-  background: #0079a1;
+  background: #618a6b;
 }
 
 /* line 287, ../bower_components/foundation/scss/foundation/components/_switch.scss */
@@ -5678,7 +6141,7 @@ table tfoot tr td {
   padding-right: 2rem;
   padding-bottom: 1.0625rem;
   padding-left: 2rem;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Georgia, serif;
   font-size: 1rem;
 }
 /* line 41, ../bower_components/foundation/scss/foundation/components/_tabs.scss */
@@ -5733,7 +6196,7 @@ table tfoot tr td {
 .tabs-content > .content {
   display: none;
   float: left;
-  padding: 0.9375rem 0;
+  padding: 0.75rem 0;
 }
 /* line 70, ../bower_components/foundation/scss/foundation/components/_tabs.scss */
 .tabs-content > .content.active {
@@ -5741,7 +6204,7 @@ table tfoot tr td {
 }
 /* line 71, ../bower_components/foundation/scss/foundation/components/_tabs.scss */
 .tabs-content > .content.contained {
-  padding: 0.9375rem;
+  padding: 0.75rem;
 }
 /* line 73, ../bower_components/foundation/scss/foundation/components/_tabs.scss */
 .tabs-content.vertical {
@@ -5749,10 +6212,10 @@ table tfoot tr td {
 }
 /* line 75, ../bower_components/foundation/scss/foundation/components/_tabs.scss */
 .tabs-content.vertical > .content {
-  padding: 0 0.9375rem;
+  padding: 0 0.75rem;
 }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 30.063em) {
   /* line 80, ../bower_components/foundation/scss/foundation/components/_tabs.scss */
   .tabs.vertical {
     width: 20%;
@@ -5781,8 +6244,8 @@ table tfoot tr td {
 }
 /* line 49, ../bower_components/foundation/scss/foundation/components/_thumbs.scss */
 .th:hover, .th:focus {
-  -webkit-box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
-  box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
+  -webkit-box-shadow: 0 0 6px 1px rgba(109, 152, 119, 0.5);
+  box-shadow: 0 0 6px 1px rgba(109, 152, 119, 0.5);
 }
 /* line 66, ../bower_components/foundation/scss/foundation/components/_thumbs.scss */
 .th.radius {
@@ -5806,8 +6269,8 @@ a.th {
 }
 /* line 39, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
 .has-tip:hover, .has-tip:focus {
-  border-bottom: dotted 1px #003f54;
-  color: #008cba;
+  border-bottom: dotted 1px #425d48;
+  color: #6d9877;
 }
 /* line 45, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
 .has-tip.tip-left, .has-tip.tip-right {
@@ -5844,8 +6307,8 @@ a.th {
 }
 /* line 74, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
 .tooltip.opened {
-  color: #008cba !important;
-  border-bottom: dotted 1px #003f54 !important;
+  color: #6d9877 !important;
+  border-bottom: dotted 1px #425d48 !important;
 }
 
 /* line 80, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
@@ -5856,7 +6319,7 @@ a.th {
   font-weight: normal;
 }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 30.063em) {
   /* line 89, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
   .tooltip > .nub {
     border-color: transparent transparent #333333 transparent;
@@ -5933,13 +6396,13 @@ td {
 /* Default Link Styles */
 /* line 152, ../bower_components/foundation/scss/foundation/components/_type.scss */
 a {
-  color: #008cba;
+  color: #6d9877;
   text-decoration: none;
   line-height: inherit;
 }
 /* line 158, ../bower_components/foundation/scss/foundation/components/_type.scss */
 a:hover, a:focus {
-  color: #0079a1;
+  color: #618a6b;
 }
 /* line 160, ../bower_components/foundation/scss/foundation/components/_type.scss */
 a img {
@@ -5966,7 +6429,7 @@ p aside {
 /* Default header styles */
 /* line 182, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Lora", Georgia, serif;
   font-weight: 300;
   font-style: normal;
   color: #222222;
@@ -6211,7 +6674,7 @@ blockquote p {
   padding: 0 0.0625rem;
 }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 30.063em) {
   /* line 379, ../bower_components/foundation/scss/foundation/components/_type.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
@@ -6345,7 +6808,7 @@ blockquote p {
 }
 /* line 77, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 meta.foundation-mq-topbar {
-  font-family: "/only screen and (min-width:40.063em)/";
+  font-family: "/only screen and (min-width:30.063em)/";
   width: 40.063em;
 }
 
@@ -6545,21 +7008,21 @@ meta.foundation-mq-topbar {
   color: white;
   padding: 12px 0 12px 0;
   padding-left: 15px;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Georgia, serif;
   font-size: 0.8125rem;
   font-weight: normal;
   background: #333333;
 }
 /* line 293, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button {
-  background: #008cba;
+  background: #6d9877;
   font-size: 0.8125rem;
   padding-right: 15px;
   padding-left: 15px;
 }
 /* line 298, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button:hover {
-  background: #006687;
+  background: #577b5f;
 }
 /* line 302, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button.secondary {
@@ -6592,12 +7055,12 @@ meta.foundation-mq-topbar {
 }
 /* line 331, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li.active > a {
-  background: #008cba;
+  background: #6d9877;
   color: white;
 }
 /* line 334, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li.active > a:hover {
-  background: #0079a1;
+  background: #618a6b;
 }
 /* line 341, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section .has-form {
@@ -6677,7 +7140,7 @@ meta.foundation-mq-topbar {
   display: block;
 }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 30.063em) {
   /* line 412, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar {
     background: #333333;
@@ -6719,7 +7182,7 @@ meta.foundation-mq-topbar {
 
   /* line 432, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .contain-to-grid .top-bar {
-    max-width: 62.5rem;
+    max-width: 75rem;
     margin: 0 auto;
     margin-bottom: 0;
   }
@@ -6853,7 +7316,7 @@ meta.foundation-mq-topbar {
   }
   /* line 573, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .no-js .top-bar-section ul li:active > a {
-    background: #008cba;
+    background: #6d9877;
     color: white;
   }
   /* line 581, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -6959,7 +7422,7 @@ section.tab-bar-section {
   height: 2.8125rem;
   top: 0;
 }
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 30.063em) {
   /* line 278, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
   section.tab-bar-section {
     text-align: left;
@@ -7075,7 +7538,7 @@ ul.off-canvas-list li a {
   right: 0;
   z-index: 1002;
 }
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 30.063em) {
   /* line 244, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
   .move-right a.exit-off-canvas:hover {
     background: rgba(255, 255, 255, 0.05);
@@ -7104,7 +7567,7 @@ ul.off-canvas-list li a {
   right: 0;
   z-index: 1002;
 }
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 30.063em) {
   /* line 244, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
   .move-left a.exit-off-canvas:hover {
     background: rgba(255, 255, 255, 0.05);
@@ -7207,7 +7670,7 @@ th.hide-for-xxlarge-up {
 }
 
 /* Medium Displays: 641px and up */
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 30.063em) {
   /* line 144, ../bower_components/foundation/scss/foundation/components/_visibility.scss */
   .hide-for-small,
   .hide-for-small-only,
@@ -7286,7 +7749,7 @@ th.hide-for-xxlarge-up {
   }
 }
 /* Large Displays: 1024px and up */
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 48.813em) {
   /* line 261, ../bower_components/foundation/scss/foundation/components/_visibility.scss */
   .hide-for-small,
   .hide-for-small-only,
@@ -7362,7 +7825,7 @@ th.hide-for-xxlarge-up {
   }
 }
 /* X-Large Displays: 1441 and up */
-@media only screen and (min-width: 90.063em) {
+@media only screen and (min-width: 64.063em) {
   /* line 373, ../bower_components/foundation/scss/foundation/components/_visibility.scss */
   .hide-for-small,
   .hide-for-small-only,
@@ -7434,7 +7897,7 @@ th.hide-for-xxlarge-up {
   }
 }
 /* XX-Large Displays: 1920 and up */
-@media only screen and (min-width: 120.063em) {
+@media only screen and (min-width: 75.063em) {
   /* line 473, ../bower_components/foundation/scss/foundation/components/_visibility.scss */
   .hide-for-small,
   .hide-for-small-only,
@@ -7703,4 +8166,22 @@ th.hide-for-touch {
 /* line 659, ../bower_components/foundation/scss/foundation/components/_visibility.scss */
 .touch th.show-for-touch {
   display: table-cell !important;
+}
+
+/* custom */
+/* line 1, ../scss/_custom.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Stint Ultra Expanded", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+@media only screen and (min-width: 30.063em) {
+  /* line 1, ../scss/_custom.scss */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+  }
+}
+@media only screen and (min-width: 48.813em) {
+  /* line 1, ../scss/_custom.scss */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+  }
 }

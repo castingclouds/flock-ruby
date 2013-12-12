@@ -8,20 +8,25 @@ keywords: github pages, Jekyll, foundation 5
 <h1>Whoa! Jekyll, Foundation 5, HTML5 boiler plate and github pages!</h1>
 
 
-<p>Simply combining <a href="">my foundation 4 starter files</a> and Jekyll to be used for github pages! See <a href="http://jekyllrb.com/docs/home/">Jekyll's documentation</a>, <a href="http://foundation.zurb.com/docs/">the foundation documentations</a>, and <a href="https://help.github.com/categories/20/articles">GitHub pages help pages</a>.</p>
+<p>I've combined my locally installed <a href="http://foundation.zurb.com/docs/sass.html">Sass version of foundation 5</a>, <a href="http://html5boilerplate.com/">html5 boilder plate</a>, and Jekyll to be used for github pages! See <a href="http://jekyllrb.com/docs/home/">Jekyll's documentation</a>, <a href="http://foundation.zurb.com/docs/">the foundation documentations</a>, and <a href="https://help.github.com/categories/20/articles">GitHub pages help pages</a>.</p>
 
-<p>You can see all <a href="https://github.com/daigofuji/jekyll-foundation-4-starter/tree/gh-pages"><i class="icon-github"></i> my sources here</a>. I created this for my personal use, but if you'd like to use it, please feel free. Shout out <a href="http://daigo.org">daigo.org</a> or <a href="http://twitter.com/DaigoFuji">@DaigoFuji</a> are appreciated, but not required.</p>
+<p>You can see all <a href="https://github.com/daigofuji/jekyll-foundation-5-starter/tree/gh-pages"><i class="fa fa-github"> 	
+</i> my sources here</a>. I created this for my personal use, but if you'd like to use it, please feel free. Shout out <a href="http://daigo.org">daigo.org</a> or <a href="http://twitter.com/DaigoFuji">@DaigoFuji</a> are appreciated, but not required.</p>
 
-<p>You should probably update the _config.yml file, and <a href="http://foundation.zurb.com/download.php#customizeFoundation">customize</a> the foundation css and stick it to the css folder, if you'd like to change base colors, max-width etc. Also most the overrides are happening in styles.css.</p>
+<div class="panel callout radius">You should probably update the <samp>_config.yml</samp> file, and edit <samp>scss/_setting.scss</samp> file. As well as <samp>scss/_custom.scss</samp>, where most the overrides are happening.</div>
 
-<p>And out of the box, this supports <a href="http://fortawesome.github.io/Font-Awesome/"><i class="icon-flag"></i> font awesome</a>, so you can go crazy with <a href="http://fortawesome.github.io/Font-Awesome/icons/">the icons</a>: <i class="icon-thumbs-up"></i>. </p> 
+<p>And out of the box, this supports <a href="http://fortawesome.github.io/Font-Awesome/">
+	<i class="fa fa-flag fa-lg">	
+	</i>
+	font awesome</a>, so you can go crazy with <a href="http://fortawesome.github.io/Font-Awesome/icons/">the icons</a>: <i class="fa fa-bitcoin fa-lg">	
+	</i> <i class="fa fa-cog fa-spin fa-lg">
+	</i>. </p> 
 
-<p></p>
 
 <div class="row"> 
 
 	<div class="large-4 columns">
-		<p class="panel"><a href="page-html-unit-test.html">foundation-example.html</a> shows how all the html tags are rendered. Foundation takes care of those out of the box.</a></p>
+		<p class="panel"><a href="page-html-unit-test.html">foundation-example.html</a> shows how all the html tags are rendered. Foundation takes care of those out of the box.</p>
 	</div>
 
 	<div class="large-4 columns">
@@ -29,7 +34,7 @@ keywords: github pages, Jekyll, foundation 5
 	</div>
 
 	<div class="large-4 columns">
-		<p class="panel">And finally, another example is the foundation's grid system, which lives in <a href="#">page 3</a></p>
+		<p class="panel">And finally, foundation's grid system, <a href="page-template-example.html">page-template-example</a> You can also <a href="http://foundation.zurb.com/templates.html">get more templates</a> from foundations home.</p>
 	</div>
 
-</div> <!-- /row -->
+</div>
