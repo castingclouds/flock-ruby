@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'commander/import'
+require 'rainbow'
+
+program :version, '0.0.1'
+program :description, 'A simpler PaaS solution'
+ 
+command :init do |c|
+  c.syntax = 'flock init app [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'initialize flock', 'flock init shepherd'
+  c.option '--some-switch', 'Some switch that does something'
+  c.action do |args, options|
+    say "=> building base config for #{Rainbow(args[0]).yellow.bright.underline} \n"
+  end
+end
+
+command :build do |c|
+  c.syntax = 'flock build app, [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'command example'
+  c.option '--some-switch', 'Some switch that does something'
+  c.action do |args, options|
+    # Do something or c.when_called Flock::Commands::Build,
+  end
+end
+
+command :run do |c|
+  c.syntax = 'flock run [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'command example'
+  c.option '--some-switch', 'Some switch that does something'
+  c.action do |args, options|
+    # Do something or c.when_called Flock::Commands::Run
+  end
+end
+
