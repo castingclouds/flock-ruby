@@ -3,6 +3,7 @@
 require 'rubygems'
 require 'commander/import'
 require 'rainbow'
+require 'httparty'
 
 program :version, '0.0.1'
 program :description, 'A simpler PaaS solution'
@@ -37,6 +38,21 @@ command :run do |c|
   c.option '--some-switch', 'Some switch that does something'
   c.action do |args, options|
     # Do something or c.when_called Flock::Commands::Run
+  end
+end
+
+command :list do |c|
+  c.syntax = 'flock list [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'command example'
+  c.option '--c', 'Controller Location'
+  c.option '--s', 'Require SSL'
+  c.action do |args, options|
+    response = HTTParty.get('http://localhost:3000/applications')
+    response.each do |app|
+      say "=> #{Rainbow(app['name']).yellow.bright}"
+    end
   end
 end
 
