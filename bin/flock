@@ -52,6 +52,9 @@ command :list do |c|
     response = HTTParty.get('http://localhost:3000/applications')
     response.each do |app|
       say "=> #{Rainbow(app['name']).yellow.bright}"
+      app['services'].each_with_index {|service, index|
+        say "service [#{index}] => #{Rainbow(service['description'])}"
+      }
     end
   end
 end
